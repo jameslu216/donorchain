@@ -1,7 +1,11 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="row">
+  <div class="col-2">
+    <img alt="Donorchain" src="../assets/donorchain.png">
+  </div>
+  <div class="col-10">
+
+  </div>
   </div>
 </template>
 

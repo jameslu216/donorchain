@@ -45,7 +45,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
-
+//import $ from 'jquery';
 export default {
   name: 'App',
 
