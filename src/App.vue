@@ -1,60 +1,52 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
+  <div id="app">
+    <div class="row">
+      <div class="col-2">
+        <img
+          alt="Donorchain"
+          src="./assets/donorchain.png"
+          class="homepic"
         />
       </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld/>
-    </v-main>
-  </v-app>
+      <div class="col-10 hometitle text-right" id="nav">
+        <router-link to="/">Home</router-link><span style="font-size:24px">/</span>
+        <router-link to="/about">認識DC</router-link> <span style="font-size:24px">/</span>
+        <router-link to="/news">最新消息</router-link> <span style="font-size:24px">/</span>
+        <router-link to="/organization">機構分類</router-link> <span style="font-size:24px">/</span>
+        <router-link to="/blog">DC部落格</router-link> <span style="font-size:24px">/</span>
+        <router-link to="/contactus">聯絡我們</router-link> <span style="font-size:24px">/</span>
+        <router-link to="/sign">登入/註冊</router-link> 
+      </div>
+      <router-view />
+    </div>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld';
-//import $ from 'jquery';
-export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
-};
-</script>
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#nav {
+  padding: 30px;
+  margin-top:50px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size:24px;
+    font-weight: bold;
+    padding:15px;  
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+.homepic{
+  height:120px;
+  width:120px;
+  margin-top:20px;
+}
+</style>
