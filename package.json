@@ -13,7 +13,8 @@
     "jquery": "^3.5.1",
     "vue": "^2.6.11",
     "vue-router": "^3.4.3",
-    "vuetify": "^2.4.0"
+    "vuetify": "^2.4.0",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -51,7 +52,10 @@
     "last 2 versions",
     "not dead"
   ],
-  "vue/no-unused-components": ["error", {
-    "ignoreWhenBindingPresent": true
-  }]
+  "vue/no-unused-components": [
+    "error",
+    {
+      "ignoreWhenBindingPresent": true
+    }
+  ]
 }
